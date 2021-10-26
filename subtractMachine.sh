@@ -2,14 +2,12 @@
 
 echo "Enter two numbers seperated by space: "
 
-read num1 num2
+echo "Number 1 = " $1
+echo  "Number 2 = " $2
 
-echo "Number 1 = " $num1
-echo  "Number 2 = " $num2
-
-if [ $num1 -le $num2 ]
+if [ $1 -le $2 ]
 then
-  let "DIFFERENCE = $num2 - $num1"
+  let "DIFFERENCE = $2 - $1"
   echo "The difference is "
   echo $DIFFERENCE
   
@@ -19,7 +17,7 @@ then
        let "DIFFERENCE = DIFFERENCE - 1"       
   done
 else
-  let "DIFFERENCE = $num1 - $num2"
+  let "DIFFERENCE = $1 - $2"
   echo "The difference is "
   echo $DIFFERENCE
   
